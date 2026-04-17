@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="waste-management.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
+            <a href="#home" class="logo">
                 <i class="fas fa-recycle"></i>
-                <h1>WasteWise</h1>
-            </div>
+                <div>
+                    <span class="logo-title">WasteWise</span>
+                    <span class="logo-tag">Smart civic cleanup network</span>
+                </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -25,224 +31,348 @@
                 <a href="#" class="login-btn">Login</a>
                 <a href="#" class="signup-btn">Sign Up</a>
             </div>
-            <div class="burger">
+            <button class="burger" aria-label="Open navigation menu" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>
+            </button>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Smart Waste Management for a Cleaner Future</h1>
-            <p>Join us in our mission to create a cleaner, greener environment through efficient waste management practices.</p>
-            <div class="hero-buttons">
-                <a href="#report" class="report-btn">Report Waste</a>
-                <a href="#services" class="learn-btn">Learn More</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-backdrop"></div>
+            <div class="hero-grid">
+                <div class="hero-content reveal">
+                    <span class="hero-badge">
+                        <i class="fas fa-seedling"></i>
+                        Cleaner streets, smarter response
+                    </span>
+                    <h1>Turn waste reports into fast, visible community action.</h1>
+                    <p>WasteWise helps residents, teams, and local authorities report waste hotspots, coordinate collection, and track cleaner neighborhoods in one modern dashboard experience.</p>
+                    <div class="hero-buttons">
+                        <a href="#report" class="report-btn">Report Waste</a>
+                        <a href="#services" class="learn-btn">Explore Services</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div class="highlight-pill">
+                            <strong>24/7</strong>
+                            <span>Digital reporting</span>
+                        </div>
+                        <div class="highlight-pill">
+                            <strong>Fast</strong>
+                            <span>Collection routing</span>
+                        </div>
+                        <div class="highlight-pill">
+                            <strong>Live</strong>
+                            <span>Status visibility</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-panel reveal">
+                    <div class="dashboard-card floating-card">
+                        <div class="card-top">
+                            <span class="status-chip">Live operations</span>
+                            <span class="mini-dot"></span>
+                        </div>
+                        <h2>City response snapshot</h2>
+                        <div class="metric-grid">
+                            <div class="metric-item">
+                                <span class="metric-value" data-target="128">0</span>
+                                <span class="metric-label">Open reports</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value" data-target="84">0</span>
+                                <span class="metric-label">Resolved today</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value" data-target="12">0</span>
+                                <span class="metric-label">Active teams</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value" data-target="96">0</span>
+                                <span class="metric-label">Segregation score</span>
+                            </div>
+                        </div>
+                        <div class="progress-stack">
+                            <div class="progress-row">
+                                <span>Collection efficiency</span>
+                                <strong>88%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <span style="width: 88%;"></span>
+                            </div>
+                            <div class="progress-row">
+                                <span>Citizen participation</span>
+                                <strong>73%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <span style="width: 73%;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <div class="glass-card-head">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <h3>Optimized pickup flow</h3>
+                                <p>Sort reports, assign crews, and keep residents updated in real time.</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li><span></span> Issue reported by resident</li>
+                            <li><span></span> Team assigned automatically</li>
+                            <li><span></span> Pickup route generated</li>
+                            <li><span></span> Cleanup confirmed and logged</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="wave-container">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-            </svg>
-        </div>
-    </section>
+            <div class="hero-scroll">
+                <span>Scroll to explore</span>
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </section>
 
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Comprehensive waste management solutions for a cleaner environment</p>
-        </div>
-        <div class="service-cards">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-trash-alt"></i>
+        <section class="impact-strip reveal">
+            <div class="impact-card">
+                <i class="fas fa-truck-loading"></i>
+                <div>
+                    <strong>Rapid pickups</strong>
+                    <p>Reduce response delays with structured reporting and routing.</p>
                 </div>
-                <h3>Waste Collection</h3>
-                <p>Schedule timely collection of waste from your location with our efficient collection service.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-recycle"></i>
+            <div class="impact-card">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <strong>Actionable data</strong>
+                    <p>Spot recurring waste zones and improve municipal planning.</p>
                 </div>
-                <h3>Recycling Programs</h3>
-                <p>Participate in our recycling initiatives to help reduce landfill waste and conserve resources.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-leaf"></i>
+            <div class="impact-card">
+                <i class="fas fa-people-group"></i>
+                <div>
+                    <strong>Community-first</strong>
+                    <p>Give citizens a simple way to support cleaner public spaces.</p>
                 </div>
-                <h3>Organic Waste Processing</h3>
-                <p>Convert your organic waste into valuable compost through our specialized processing facilities.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h3>Waste Reporting</h3>
-                <p>Report waste accumulation in your area for prompt cleanup and disposal.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="report" class="report-section">
-        <div class="section-header">
-            <h2>Report Waste</h2>
-            <p>Help us keep our community clean by reporting waste</p>
-        </div>
-        <div class="report-container">
-            <div class="report-image">
-                <img src="https://img.freepik.com/premium-photo/colorful-recycling-bins-with-recycling-symbols-public-places-waste-management-recycling_140555-3473.jpg" alt="Waste Reporting">
+        <section id="services" class="services section-shell">
+            <div class="section-header reveal">
+                <span class="eyebrow">Solutions</span>
+                <h2>Waste operations built for real neighborhoods</h2>
+                <p>From waste reporting to recycling coordination, every feature is designed to make response faster and cleaner.</p>
             </div>
-            <div class="report-form">
-                <form id="waste-report-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="service-cards">
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-trash-alt"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <h3>Waste Collection</h3>
+                    <p>Schedule reliable collection requests and route teams efficiently across residential and public areas.</p>
+                    <span class="card-link">Collection planning</span>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-recycle"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                    <h3>Recycling Programs</h3>
+                    <p>Encourage responsible disposal with guided recycling categories and awareness-friendly workflows.</p>
+                    <span class="card-link">Recycling insights</span>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="waste-type">Waste Type</label>
-                        <select id="waste-type" name="waste-type" required>
-                            <option value="">Select Waste Type</option>
-                            <option value="organic">Organic</option>
-                            <option value="inorganic">Inorganic</option>
-                            <option value="mixed">Mixed</option>
-                            <option value="dry waste">Dry Waste</option>
-                            <option value="wet waste">Wet Waste</option>
-                            <option value="household">Household</option>
-                            <option value="river garbage">River Garbage</option>
-                        </select>
+                    <h3>Organic Waste Processing</h3>
+                    <p>Support composting and organic recovery programs that keep biodegradable waste out of landfills.</p>
+                    <span class="card-link">Organic recovery</span>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" id="location" name="location" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Location Description</label>
-                        <textarea id="description" name="description" rows="3" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Upload Image</label>
-                        <input type="file" id="image" name="image" accept="image/*">
-                    </div>
-                    <button type="submit" class="submit-btn">Submit Report</button>
-                </form>
+                    <h3>Waste Reporting</h3>
+                    <p>Capture location-specific waste issues quickly so cleanup teams can verify and act without delays.</p>
+                    <span class="card-link">Field reporting</span>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about-section">
-        <div class="section-header">
-            <h2>About Us</h2>
-            <p>Our mission and vision for a cleaner environment</p>
-        </div>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1610141160723-d2d346e73766?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhc3RlJTIwbWFuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" alt="About WasteWise">
+        <section id="report" class="report-section section-shell">
+            <div class="section-header reveal">
+                <span class="eyebrow">Take Action</span>
+                <h2>Submit a waste report in minutes</h2>
+                <p>Share the issue, upload a photo, and help cleanup teams find the exact location faster.</p>
             </div>
-            <div class="about-text">
-                <h3>Who We Are</h3>
-                <p>WasteWise is a dedicated waste management system committed to creating a cleaner, healthier environment for our communities. Our team of experts works tirelessly to implement efficient waste collection, segregation, and disposal methods.</p>
-                
-                <h3>Our Mission</h3>
-                <p>We aim to revolutionize waste management practices by implementing sustainable solutions that minimize environmental impact while maximizing resource recovery.</p>
-                
-                <h3>Our Vision</h3>
-                <p>A world where waste is viewed as a resource, where communities thrive in clean environments, and where sustainable waste management practices are the norm.</p>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <h4>100+</h4>
-                        <p>Reports Processed</p>
-                    </div>
-                    <div class="stat-item">
-                        <h4>30+</h4>
-                        <p>Waste Collections</p>
-                    </div>
-                    <div class="stat-item">
-                        <h4>0+</h4>
-                        <p>Clean Areas</p>
+            <div class="report-container">
+                <div class="report-image reveal">
+                    <img src="https://img.freepik.com/premium-photo/colorful-recycling-bins-with-recycling-symbols-public-places-waste-management-recycling_140555-3473.jpg" alt="Waste Reporting">
+                    <div class="image-overlay">
+                        <div>
+                            <span class="overlay-tag">Field-ready workflow</span>
+                            <h3>Structured reports mean quicker cleanup and clearer follow-up.</h3>
+                        </div>
                     </div>
                 </div>
+                <div class="report-form reveal">
+                    <div class="form-intro">
+                        <h3>Report details</h3>
+                        <p>Provide as much context as possible so teams can prioritize the request accurately.</p>
+                    </div>
+                    <form id="waste-report-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="waste-type">Waste Type</label>
+                                <select id="waste-type" name="waste-type" required>
+                                    <option value="">Select Waste Type</option>
+                                    <option value="organic">Organic</option>
+                                    <option value="inorganic">Inorganic</option>
+                                    <option value="mixed">Mixed</option>
+                                    <option value="dry waste">Dry Waste</option>
+                                    <option value="wet waste">Wet Waste</option>
+                                    <option value="household">Household</option>
+                                    <option value="river garbage">River Garbage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Street, landmark, or area" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Location Description</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Describe the issue and any nearby reference points" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Upload Image</label>
+                            <input type="file" id="image" name="image" accept="image/*">
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Report</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="section-header">
-            <h2>Contact Us</h2>
-            <p>Get in touch with our team for any inquiries</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Address</h3>
-                        <p>Sonepat, Harayana</p>
-                    </div>
+        <section id="about" class="about-section section-shell">
+            <div class="section-header reveal">
+                <span class="eyebrow">About WasteWise</span>
+                <h2>Technology-enabled cleanup with a human mission</h2>
+                <p>We’re building waste management tools that help communities stay cleaner through visibility, accountability, and faster response.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1610141160723-d2d346e73766?w=1200&auto=format&fit=crop&q=80" alt="About WasteWise">
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+91 9090909090</p>
+                <div class="about-text reveal">
+                    <div class="about-panel">
+                        <h3>Who We Are</h3>
+                        <p>WasteWise is a dedicated waste management platform focused on cleaner neighborhoods, stronger recycling habits, and a smoother connection between citizens and response teams.</p>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p>wastemanagement@wms.co.in</p>
+                    <div class="about-panel">
+                        <h3>Our Mission</h3>
+                        <p>We aim to modernize waste operations with digital reporting, sustainable practices, and better coordination between public services and residents.</p>
                     </div>
-                </div>
-                <div class="social-media">
-                    <a href="https://github.com/JatinDuttt"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/jatin-dutt-8b357930a/"><i class="fab fa-linkedin"></i></a>
+                    <div class="about-panel">
+                        <h3>Our Vision</h3>
+                        <p>A future where every waste issue is easy to report, quick to resolve, and part of a smarter environmental system.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item reveal">
+                            <h4 data-target="100">0</h4>
+                            <p>Reports Processed</p>
+                        </div>
+                        <div class="stat-item reveal">
+                            <h4 data-target="30">0</h4>
+                            <p>Waste Collections</p>
+                        </div>
+                        <div class="stat-item reveal">
+                            <h4 data-target="25">0</h4>
+                            <p>Clean Areas</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="contact-name">Name</label>
-                        <input type="text" id="contact-name" name="contact-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email">Email</label>
-                        <input type="email" id="contact-email" name="contact-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-subject">Subject</label>
-                        <input type="text" id="contact-subject" name="contact-subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+        </section>
+
+        <section id="contact" class="contact-section section-shell">
+            <div class="section-header reveal">
+                <span class="eyebrow">Connect</span>
+                <h2>Talk to the team behind the cleanup network</h2>
+                <p>Questions, partnership ideas, or deployment support, we’d love to hear from you.</p>
             </div>
-        </div>
-    </section>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Sonepat, Haryana</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 9090909090</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>wastemanagement@wms.co.in</p>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://github.com/JatinDuttt" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/jatin-dutt-8b357930a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <div class="form-intro">
+                        <h3>Send a message</h3>
+                        <p>We’ll get back to you with the right information or next steps.</p>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="contact-email" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" name="contact-subject" placeholder="How can we help?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" placeholder="Write your message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -263,7 +393,7 @@
             </div>
             <div class="footer-newsletter">
                 <h3>Newsletter</h3>
-                <p>Subscribe to our newsletter for updates and tips on waste management.</p>
+                <p>Subscribe for updates, awareness tips, and cleaner city initiatives.</p>
                 <form id="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
@@ -271,14 +401,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 WasteWise. All rights reserved.</p>
+            <p>&copy; 2026 WasteWise. All rights reserved.</p>
             <div class="footer-social">
-              
-                <a href="https://www.linkedin.com/in/jatin-dutt-8b357930a/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/jatin-dutt-8b357930a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="waste-management.js"></script>
 </body>
-</html> 
+</html>
